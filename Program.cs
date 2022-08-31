@@ -21,15 +21,13 @@ int[] GetArrey(int n, int min, int max)
         for (int j = i + 1; j < n; j++)
         {
             if (arr[minPos] > arr[j])//выстраивает от меньшего к большему
-            if(array[minPos] < array[j])//выстраивает от большего к меньшему
             {
                 minPos = j;
             }
-        }
-
         int temp = arr[minPos];
         arr[minPos] = arr[i];
         arr[i] = temp;
+        }
     }
 
     for (int i = 0; i < n; i++)
